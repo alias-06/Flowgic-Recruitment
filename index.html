@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOWGIC IT - بوابة الانضمام الرسمية 2026</title>
+  
+  <!-- 🌐 بطاقة المعاينة عند مشاركة الرابط (Open Graph Meta) -->
+  <meta property="og:title" content="طلب الانضمام إلى FLOWGIC IT ⚡">
+  <meta property="og:description" content="انضم إلى الكيان التقني والأكاديمي البارز في كلية تكنولوجيا المعلومات - جامعة اليرموك. ابدأ رحلتك في صناعة الأثر!">
+  <meta property="og:image" content="https://imgur.com/73qk0nA.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/L126Gi8.jpg">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Three.js للرسوميات ثلاثية الأبعاد المتحركة -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- خط Tajawal من قوقل -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Tajawal', sans-serif; 
+      background-color: #020617;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    #canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .glass-card {
+      background: rgba(8, 18, 36, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 102, 255, 0.35);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-card {
+      background: rgba(8, 18, 36, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 25px rgba(0, 102, 255, 0.25);
+    }
+
+    .option-card input:checked + .card-content {
+      border-color: #0066ff;
+      background: rgba(0, 102, 255, 0.28);
+      box-shadow: 0 0 25px rgba(0, 102, 255, 0.5);
+    }
+
+    .option-card input:checked + .card-content .check-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .error-msg {
+      color: #ef4444;
+      font-size: 0.75rem;
+      margin-top: 0.375rem;
+      display: none;
+    }
+
+    input:invalid:not(:placeholder-shown) {
+      border-color: #ef4444 !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-100 py-6 px-4 sm:px-6">
+
+  <!-- خلفية التفاعلية المتحركة ثلاثية الأبعاد (FLOWGIC 3D Matrix) -->
+  <div id="canvas-container"></div>
+
+  <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+    
+    <!-- 🖼️ 1. الهيد بانر الرئيسي الخاص بفريق FLOWGIC IT -->
+    <div class="banner-card rounded-3xl overflow-hidden p-1.5 sm:p-2 relative">
+      <img src="banner.jpg" alt="FLOWGIC IT Header Banner" class="w-full h-auto object-cover rounded-2xl shadow-inner">
+    </div>
+
+    <!-- 📦 الحاوية الرئيسية للتسجيل -->
+    <div id="formSection" class="space-y-6">
+      
+      <!-- 📌 2. البطاقة التعريفية والأهداف الشاملة -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden space-y-5">
+        
+        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-slate-800 pb-3">
+          <span class="text-xs font-bold text-blue-300">كلية تكنولوجيا المعلومات وعلوم الحاسوب - جامعة اليرموك.</span>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-sky-300 text-xs font-bold">
+            <span>⚡</span> FLOWGIC RECRUITMENT 2026
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+            طلب الانضمام إلى <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">FLOWGIC IT</span>
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-semibold">
+            انضمامك إلى FLOWGIC هو فرصة لتكون جزءًا من كيان طلابي يسعى إلى:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">📚</span> <span>تطوير المهارات والمعرفة الأكاديمية والتقنية.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">📋</span> <span>تطوير العمل التنظيمي وبناء بيئة طلابية متكاملة.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">🤝🏻</span> <span>إطلاق مبادرات تطوعية ذات أثر.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">💻</span> <span>دعم الابتكار وتحويل الأفكار إلى مشاريع وتطبيقات.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">📱</span> <span>تعزيز الحضور الإعلامي والرقمي لطلبة الـIT.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200">
+            <span class="text-base">📈</span> <span>تنمية القيادة والعمل الجماعي والمهارات الشخصية.</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-slate-200 sm:col-span-2">
+            <span class="text-base">🌐</span> <span>بناء العلاقات وفتح فرص التدريب والتطوير.</span>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800/80 space-y-1.5 text-xs sm:text-sm">
+          <p class="font-extrabold text-sky-400 flex items-center gap-2">
+            <span>⚡</span> نحن لا نبني فريقًا للمشاركة، بل نبني كيانًا لصناعة الأثر.
+          </p>
+          <p class="font-bold text-slate-300 flex items-center gap-2">
+            <span>✨</span> انضم إلينا، وكن جزءًا من تطوير مجتمع طلبة الـIT.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- 3. النموذج البرمجي الرئيسي -->
+      <form id="recruitmentForm" class="space-y-6" novalidate>
+
+        <!-- البيانات الشخصية مع التحقق الذكي -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>👤</span> البيانات الشخصية
+          </h3>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">
+              البريد الإلكتروني <span class="text-blue-400">*</span>
+            </label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com"
+              class="w-full px-4 py-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-[#0066ff] focus:ring-1 focus:ring-[#0066ff] transition-all text-sm">
+            <p id="emailError" class="error-msg">⚠️ يرجى إدخال بريد إلكتروني صحيح.</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">
+              الاسم الرباعي <span class="text-blue-400">*</span>
+            </label>
+            <input type="text" id="fullName" name="fullName" required placeholder="أدخل اسمك الرباعي كاملاً"
+              class="w-full px-4 py-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-[#0066ff] focus:ring-1 focus:ring-[#0066ff] transition-all text-sm">
+            <p id="nameError" class="error-msg">⚠️ يرجى إدخال الاسم الرباعي كاملاً.</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">
+              الرقم الجامعي (10 أرقام) <span class="text-blue-400">*</span>
+            </label>
+            <input type="text" id="studentId" name="studentId" required maxlength="10" placeholder="مثال: 2022901000"
+              class="w-full px-4 py-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-[#0066ff] focus:ring-1 focus:ring-[#0066ff] transition-all text-sm">
+            <p id="idError" class="error-msg">⚠️ الرقم الجامعي يجب أن يتكون من 10 أرقام فقط.</p>
+          </div>
+        </div>
+
+        <!-- اختيار التخصص -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>🎓</span> التخصص <span class="text-blue-400 text-xs">*</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="علوم الحاسوب (CS)" required class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">علوم الحاسوب</p>
+                  <p class="text-xs text-slate-400">Computer Science (CS)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="تطوير الألعاب والواقع الرقمي (DRG)" class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">تطوير الألعاب والواقع الرقمي</p>
+                  <p class="text-xs text-slate-400">(DRG)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="نظم المعلومات الحاسوبية (CIS)" class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">نظم المعلومات الحاسوبية</p>
+                  <p class="text-xs text-slate-400">(CIS)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="علم البيانات والذكاء الاصطناعي (DA)" class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">علم البيانات والذكاء الاصطناعي</p>
+                  <p class="text-xs text-slate-400">(DA)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="تكنولوجيا معلومات الأعمال (BIT)" class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">تكنولوجيا معلومات الأعمال</p>
+                  <p class="text-xs text-slate-400">(BIT)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="major" value="الأمن السيبراني (CYS)" class="hidden">
+              <div class="card-content p-4 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-bold text-white">الأمن السيبراني</p>
+                  <p class="text-xs text-slate-400">Cybersecurity (CYS)</p>
+                </div>
+                <span class="check-icon opacity-0 text-blue-400 text-lg transition-all">✓</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- السنة الدراسية -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>📅</span> السنة الدراسية الحالية <span class="text-blue-400 text-xs">*</span>
+          </h3>
+
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="academicYear" value="الأولى" required class="hidden">
+              <div class="card-content py-3.5 px-2 text-center rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all">
+                <span class="text-xs font-bold text-slate-200">الأولى</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="academicYear" value="الثانية" class="hidden">
+              <div class="card-content py-3.5 px-2 text-center rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all">
+                <span class="text-xs font-bold text-slate-200">الثانية</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="academicYear" value="الثالثة" class="hidden">
+              <div class="card-content py-3.5 px-2 text-center rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all">
+                <span class="text-xs font-bold text-slate-200">الثالثة</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="academicYear" value="الرابعة" class="hidden">
+              <div class="card-content py-3.5 px-2 text-center rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all">
+                <span class="text-xs font-bold text-slate-200">الرابعة</span>
+              </div>
+            </label>
+
+            <label class="option-card cursor-pointer col-span-2 sm:col-span-1">
+              <input type="radio" name="academicYear" value="أخرى" class="hidden">
+              <div class="card-content py-3.5 px-2 text-center rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all">
+                <span class="text-xs font-bold text-slate-200">أخرى</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- شرح اللجان -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-base font-bold text-blue-400 border-b border-slate-800 pb-3">
+            💡 (نص توضيحي) تعرّف على هيكل ولجان فريق FLOWGIC
+          </h3>
+          
+          <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+            <div>
+              <p class="font-bold text-white mb-1">🧠 أولاً: اللجان الاستراتيجية (التخطيط والتوجيه)</p>
+              <p class="pr-4 text-slate-400">📖 <strong>اللجنة الأكاديمية والتعليمية:</strong> الإرشاد الأكاديمي، شرح المواد، والمصادر وبنوك الأسئلة.</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-white mb-1">⚙️ ثانياً: اللجان التنفيذية (التنفيذ وإدارة المشاريع)</p>
+              <ul class="pr-4 space-y-1 text-slate-400">
+                <li>📋 <strong>اللجنة التنظيمية والإدارية:</strong> تنظيم الاجتماعات والفعاليات والتنسيق.</li>
+                <li>🤝 <strong>اللجنة التطوعية:</strong> استقطاب المتطوعين وتنفيذ الأعمال التطوعية.</li>
+                <li>💻 <strong>لجنة التقنية والابتكار:</strong> البرمجة، الذكاء الاصطناعي، والأمن السيبراني، والورش.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-bold text-white mb-1">📢 ثالثاً: لجان التواصل والتطوير (العلاقات والنمو)</p>
+              <ul class="pr-4 space-y-1 text-slate-400">
+                <li>📱 <strong>اللجنة الإعلامية والتسويق الرقمي:</strong> السوشيال ميديا، التصميم، والتصوير.</li>
+                <li>📈 <strong>لجنة التطوير والمهارات:</strong> إعداد الـ CV، حسابات LinkedIn، والتجهيز لسوق العمل.</li>
+                <li>🌐 <strong>لجنة العلاقات والشراكات:</strong> بناء العلاقات مع الشركات والخريجين والرعاة.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- اختيار اللجنة الأولى -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>🎯</span> ما هي اللجنة الأولى التي ترغب بالانضمام إليها؟ <span class="text-blue-400 text-xs">*</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="اللجنة الأكاديمية والتعليمية" required class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📖 اللجنة الأكاديمية والتعليمية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="اللجنة التنظيمية والإدارية" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📋 اللجنة التنظيمية والإدارية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="اللجنة التطوعية" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>🤝 اللجنة التطوعية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="لجنة التقنية والابتكار" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>💻 لجنة التقنية والابتكار</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="اللجنة الإعلامية والتسويق الرقمي" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📱 اللجنة الإعلامية والتسويق الرقمي</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="firstChoice" value="لجنة التطوير والمهارات" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📈 لجنة التطوير والمهارات</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer sm:col-span-2">
+              <input type="radio" name="firstChoice" value="لجنة العلاقات والشراكات" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>🌐 لجنة العلاقات والشراكات</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- اختيار اللجنة الثانية -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>🔄</span> ما هي اللجنة الثانية (كخيار بديل)؟ <span class="text-blue-400 text-xs">*</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="اللجنة الأكاديمية والتعليمية" required class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📖 اللجنة الأكاديمية والتعليمية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="اللجنة التنظيمية والإدارية" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📋 اللجنة التنظيمية والإدارية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="اللجنة التطوعية" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>🤝 اللجنة التطوعية</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="لجنة التقنية والابتكار" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>💻 لجنة التقنية والابتكار</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="اللجنة الإعلامية والتسويق الرقمي" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📱 اللجنة الإعلامية والتسويق الرقمي</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer">
+              <input type="radio" name="secondChoice" value="لجنة التطوير والمهارات" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>📈 لجنة التطوير والمهارات</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+            <label class="option-card cursor-pointer sm:col-span-2">
+              <input type="radio" name="secondChoice" value="لجنة العلاقات والشراكات" class="hidden">
+              <div class="card-content p-3.5 rounded-xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 transition-all flex items-center justify-between">
+                <span>🌐 لجنة العلاقات والشراكات</span>
+                <span class="check-icon opacity-0 text-blue-400 transition-all">✓</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- رقم الهاتف والتواصل مع التحقق الأردني الصارم -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <h3 class="text-base font-bold text-blue-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <span>📞</span> معلومات التواصل
+          </h3>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">
+              رقم الهاتف للتواصل (مثال: 0791234567) <span class="text-blue-400">*</span>
+            </label>
+            <input type="tel" id="phone" name="phone" required maxlength="10" placeholder="079xxxxxxxx"
+              class="w-full px-4 py-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-[#0066ff] focus:ring-1 focus:ring-[#0066ff] transition-all text-sm">
+            <p id="phoneError" class="error-msg">⚠️ يرجى إدخال رقم هاتف أردني صحيح يتكون من 10 أرقام ويبدأ بـ (077, 078, 079).</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">
+              حساب تواصل اجتماعي (إختياري)
+            </label>
+            <input type="text" id="socialMedia" name="socialMedia" placeholder="رابط حسابك على LinkedIn أو Instagram"
+              class="w-full px-4 py-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-[#0066ff] focus:ring-1 focus:ring-[#0066ff] transition-all text-sm">
+          </div>
+        </div>
+
+        <!-- زر الإرسال -->
+        <button type="submit" id="submitBtn"
+          class="w-full py-4 rounded-2xl bg-gradient-to-r from-[#0066ff] via-blue-600 to-indigo-600 text-white font-extrabold text-base shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-[1.01] transition-all">
+          إرسال الطلب 🚀
+        </button>
+
+      </form>
+    </div>
+
+    <!-- 🌟 4. شاشة النجاح والشكر (Success Screen) -->
+    <div id="successSection" class="hidden space-y-6">
+      <div class="glass-card rounded-3xl p-8 sm:p-10 text-center space-y-6 border-blue-500/50 shadow-2xl shadow-blue-500/20">
+        
+        <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-tr from-blue-600 to-sky-400 p-0.5 shadow-xl shadow-sky-500/30">
+          <div class="w-full h-full bg-slate-950 rounded-[22px] flex items-center justify-center">
+            <span class="text-4xl">🚀</span>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
+            <span>✓</span> APPLICATION SUBMITTED SUCCESSFULLY
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">
+            شُكراً لاهتمامك بالانضمام إلى <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">FLOWGIC IT</span>
+          </h2>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl mx-auto">
+          خطوتك بالتسجيل معنا اليوم هي بداية رحلة مميزة لتطوير مهاراتك التقنية والأكاديمية، وبناء شبكة علاقات متينة داخل كلية تكنولوجيا المعلومات. نحن لا نبني مجرد فريق للمشاركة، بل كياناً متكاملاً لصناعة الأثر الحقيقي.
+        </p>
+
+        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 text-right space-y-3 max-w-xl mx-auto">
+          <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+            <span class="text-xs font-bold text-slate-400">حالة الطلب الحالية:</span>
+            <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold">
+              قيد المراجعة والتقييم ⏳
+            </span>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            📩 يقوم مسؤول قيادة اللجان حالياً بمراجعة بياناتك واختياراتك المرفقة. **سيتم إرسال إشعار رسمياً عبر البريد الإلكتروني الذي قمت بإدخاله** يتضمن حالة القرار النهائي ورابط مجموعة الواتساب المخصصة.
+          </p>
+        </div>
+
+        <div class="pt-4">
+          <button onclick="window.location.reload();" 
+            class="px-8 py-3.5 rounded-2xl bg-slate-900 border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white text-xs font-bold transition-all shadow-lg">
+            العودة للصفحة الرئيسية 🔄
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ⚠️ 5. شاشة التنبيه في حالة التسجيل المسبق (Duplicate Notice) -->
+    <div id="duplicateSection" class="hidden space-y-6">
+      <div class="glass-card rounded-3xl p-8 sm:p-10 text-center space-y-6 border-amber-500/50 shadow-2xl shadow-amber-500/20">
+        
+        <div class="w-20 h-20 mx-auto rounded-3xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-4xl shadow-lg">
+          <span>⏳</span>
+        </div>
+
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold">
+            <span>⚠️</span> DUPLICATE SUBMISSION DETECTED
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">
+            تم استلام طلبك سابقاً!
+          </h2>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl mx-auto">
+          تبين للأنظمة لدينا أن البريد الإلكتروني أو الرقم الجامعي الخاص بك مُسجل مسبقاً في قاعدة البيانات وهو قيد المراجعة حالياً من قِبل قادة اللجان.
+        </p>
+
+        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 text-xs text-slate-400 max-w-xl mx-auto">
+          يرجى تفقد بريدك الإلكتروني لمعرفة المستجدات فور صدور القرارات، لا داعي لإعادة التقديم.
+        </div>
+
+        <div class="pt-4">
+          <button onclick="window.location.reload();" 
+            class="px-8 py-3.5 rounded-2xl bg-slate-900 border border-slate-700 hover:border-amber-500 text-slate-300 hover:text-white text-xs font-bold transition-all shadow-lg">
+            إغلاق والتحديث 🔄
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPwXzTG4QY768hfLx2zHGXncfunQSgMP9HGif5mMn41v5crnjKzz1fFRbTgcr2Hiza/exec';
+    
+    const form = document.getElementById('recruitmentForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSection = document.getElementById('formSection');
+    const successSection = document.getElementById('successSection');
+    const duplicateSection = document.getElementById('duplicateSection');
+
+    // عناصر المدخلات للتحقق الذكي
+    const studentIdInput = document.getElementById('studentId');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const fullNameInput = document.getElementById('fullName');
+
+    // 🔒 منع إدخال أي حروف في الرقم الجامعي والهاتف (أرقام فقط)
+    studentIdInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
+
+    phoneInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
+
+    // 🎯 دالة التحقق الذكي الصارم قبل الإرسال
+    function validateForm() {
+      let isValid = true;
+
+      // 1. فحص البريد
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailInput.value.trim())) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('emailError').style.display = 'none';
+      }
+
+      // 2. فحص الاسم الرباعي
+      if (fullNameInput.value.trim().split(/\s+/).length < 3) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('nameError').style.display = 'none';
+      }
+
+      // 3. فحص الرقم الجامعي (10 أرقام بالضبط)
+      if (studentIdInput.value.trim().length !== 10) {
+        document.getElementById('idError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('idError').style.display = 'none';
+      }
+
+      // 4. فحص رقم الهاتف الأردني (10 أرقام ويبدأ بـ 077, 078, 079)
+      const phoneVal = phoneInput.value.trim();
+      const jordanPhonePattern = /^(077|078|079)\d{7}$/;
+      if (!jordanPhonePattern.test(phoneVal)) {
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('phoneError').style.display = 'none';
+      }
+
+      return isValid;
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      if (!validateForm()) {
+        return; // إيقاف الإرسال في حال وجود خطأ في البيانات
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'جاري إرسال الطلب والتحقق من البيانات... ⏳';
+
+      const formData = {
+        email: emailInput.value.trim(),
+        fullName: fullNameInput.value.trim(),
+        studentId: studentIdInput.value.trim(),
+        major: document.querySelector('input[name="major"]:checked')?.value || '',
+        academicYear: document.querySelector('input[name="academicYear"]:checked')?.value || '',
+        firstChoice: document.querySelector('input[name="firstChoice"]:checked')?.value || '',
+        secondChoice: document.querySelector('input[name="secondChoice"]:checked')?.value || '',
+        phone: phoneInput.value.trim(),
+        socialMedia: document.getElementById('socialMedia').value.trim()
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(formData)
+      })
+      .then(res => res.json())
+      .then(response => {
+        formSection.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (response.result === 'duplicate') {
+          // إظهار شاشة التكرار
+          duplicateSection.classList.remove('hidden');
+        } else {
+          // إظهار شاشة النجاح
+          successSection.classList.remove('hidden');
+        }
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        // في حالة الكورس العادي يتم اعتماد التسجيل
+        formSection.classList.add('hidden');
+        successSection.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // 🌌 محرك حركة الشبكة العصبية الثلاثية الأبعاد (Three.js Engine)
+    let scene, camera, renderer, particles, lines;
+    let mouseX = 0, mouseY = 0;
+    let targetX = 0, targetY = 0;
+
+    function init3D() {
+      const container = document.getElementById('canvas-container');
+      
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2500);
+      camera.position.z = 450;
+
+      const count = 250;
+      const geometry = new THREE.BufferGeometry();
+      const positions = new Float32Array(count * 3);
+
+      for (let i = 0; i < count * 3; i += 3) {
+        positions[i] = (Math.random() - 0.5) * 1100;
+        positions[i + 1] = (Math.random() - 0.5) * 1100;
+        positions[i + 2] = (Math.random() - 0.5) * 1100;
+      }
+
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+      const pMaterial = new THREE.PointsMaterial({
+        color: 0x38bdf8,
+        size: 5,
+        transparent: true,
+        opacity: 0.9
+      });
+
+      particles = new THREE.Points(geometry, pMaterial);
+      scene.add(particles);
+
+      const lineGeometry = new THREE.BufferGeometry();
+      const linePositions = [];
+      const pos = geometry.attributes.position.array;
+
+      for (let i = 0; i < count; i++) {
+        for (let j = i + 1; j < count; j++) {
+          const dx = pos[i * 3] - pos[j * 3];
+          const dy = pos[i * 3 + 1] - pos[j * 3 + 1];
+          const dz = pos[i * 3 + 2] - pos[j * 3 + 2];
+          const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+          if (dist < 150) {
+            linePositions.push(pos[i * 3], pos[i * 3 + 1], pos[i * 3 + 2]);
+            linePositions.push(pos[j * 3], pos[j * 3 + 1], pos[j * 3 + 2]);
+          }
+        }
+      }
+
+      lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+      
+      const lMaterial = new THREE.LineBasicMaterial({
+        color: 0x0066ff,
+        transparent: true,
+        opacity: 0.45
+      });
+
+      lines = new THREE.LineSegments(lineGeometry, lMaterial);
+      scene.add(lines);
+
+      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      container.appendChild(renderer.domElement);
+
+      document.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onWindowResize);
+
+      animate();
+    }
+
+    function onMouseMove(event) {
+      mouseX = (event.clientX - window.innerWidth / 2) * 0.25;
+      mouseY = (event.clientY - window.innerHeight / 2) * 0.25;
+    }
+
+    function onScroll() {
+      targetY = window.scrollY * 0.18;
+    }
+
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      targetX += (mouseX - targetX) * 0.05;
+
+      particles.rotation.y += 0.0018;
+      particles.rotation.x += 0.0010;
+      lines.rotation.y += 0.0018;
+      lines.rotation.x += 0.0010;
+
+      camera.position.x += (targetX - camera.position.x) * 0.05;
+      camera.position.y += (-targetY - camera.position.y) * 0.05;
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    }
+
+    init3D();
+  </script>
+</body>
+</html>
